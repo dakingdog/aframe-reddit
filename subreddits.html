@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Hello, World! - A-Frame</title>
     <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script type="text/javascript">
@@ -25,32 +25,12 @@
             });
         }
     });
-    AFRAME.registerComponent('cursor-listener', {
-        init: function() {
-            this.el.addEventListener('click', function(evt) {
-                // console.log("Hiii");
-                window.location.href = 'subreddits.html';
-            });
-        }
-    });
     </script>
 </head>
 
 <body>
     <a-scene>
-        <a-assets>
-            <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-        </a-assets>
-        <a-box position="-5 0.5 -3" rotation="0 45 0" color="#4CC3D9">
-            <a-animation attribute="position" to="-5 .6 -3" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
-        </a-box>
-        <a-sphere position="2 1.25 -5" radius="1.25" color="#EF2D5E" change-color-on-hover="color: blue" cursor-listener="">
-            <a-text value="Subscribed Subreddits" color="#FFFFFF" position="0 1.25 -4" scale="1.5 1.5 1.5"></a-text>
-        </a-sphere>
-        <a-cylinder position="10 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="grey"></a-plane>
-        <!-- <a-entity environment="preset: forest; numDressing: 500"></a-entity> -->
-        <a-sky src="#skyTexture"></a-sky>
+        <a-sky color="#ECECEC"></a-sky>
         <!-- <a-camera> -->
         <!-- <a-cursor></a-cursor> -->
         <!-- </a-camera> -->
